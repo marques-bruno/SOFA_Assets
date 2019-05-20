@@ -46,7 +46,14 @@ class MyEngine(Sofa.PythonScriptDataEngine):
 
 def createScene(node):
     """ A stupid sofa scene """
+    print "    n = node.createChild('An empty node in root')"
+
     n = node.createChild("An empty node in root")
+    print "    APrefab(n)"
     APrefab(n)
+
+    print '    MyEngine(node)'
     MyEngine(node)
+
+    print "    MyController(node)"
     MyController(node)
