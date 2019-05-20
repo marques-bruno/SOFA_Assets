@@ -1,0 +1,18 @@
+""" type: SofaContent """
+
+#encoding:utf-8
+from splib.objectmodel import SofaPrefab
+
+################## Prefab en carton ################################
+@SofaPrefab
+class ExternPrefab:
+    def __init__(self, parent):
+        """ POUETPOUETPOUET HAHAHA KIKOO """
+        self.node = parent.createChild("ExternPrefab")
+        self.node.addNewData("angle", "DynamicProperty", "Blah", "float", 45.0)
+
+        self.node.createObject("MechanicalObject", name="titi")
+        self.node.createObject("MechanicalObject", name="toto")
+        self.node.createObject("MechanicalObject", name="tata")
+        visual = self.node.createChild("Visual")
+        visual.createObject("MechanicalObject", name="tata")
